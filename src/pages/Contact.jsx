@@ -7,8 +7,8 @@ export default function Contact() {
         {/* CONTACT DETAILS */}
         <div style={styles.card}>
           <h1 style={styles.title}>Contact Me</h1>
-          <p>GitHub:</p>
-          <p>Email:</p>
+          <p><a href="https://github.com/anusb412">GitHub:/anusb412 </a></p>
+          <p><a href="/">Email: anusb412@gmail.com</a></p>
           <p>Volcon:</p>
         </div>
         <div style={styles.form}>

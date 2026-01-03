@@ -1,22 +1,69 @@
-body {
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  background: #f4f4f4;
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+  -webkit-font-smoothing: antialiased;
+  background: #f5f5f5;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
 }
 
 .navbar {
   display: flex;
-  justify-content: space-between;
-  padding: 20px;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
   background: #222;
   color: white;
 }
 
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
 .nav-links a {
-  margin-left: 15px;
   text-decoration: none;
   color: white;
   font-weight: bold;
+  font-size: 14px;
 }
 
 .nav-links a:hover {
@@ -24,12 +71,275 @@ body {
 }
 
 .main {
-  padding: 40px;
+  padding: 16px;
 }
 
 section {
-  background: white;
-  padding: 30px;
+  background: whitesmoke;
+  padding: 14px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.heroCard {
+  background: white;
+  padding: 20px 14px;
+  border-radius: 18px;
+  text-align: center;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.12);
+}
+
+.title {
+  font-size: 24px;
+  margin-bottom: 12px;
+  font-weight: 800;
+  color: #1a1a1a;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 24px;
+  line-height: 1.6;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.primaryBtn,
+.secondaryBtn {
+  width: 100%;
+  padding: 14px;
+  border-radius: 10px;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 16px;
+  text-align: center;
+  transition: 0.2s;
+}
+
+.primaryBtn {
+  background: #2563eb;
+  color: white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.secondaryBtn {
+  border: 2px solid #2563eb;
+  color: #2563eb;
+}
+
+.skillsCard {
+  background: #ddcbcbff;
+  padding: 24px 16px;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+.sectionTitle {
+  font-size: 22px;
+  margin-bottom: 18px;
+  font-weight: 700;
+  color: #222;
+}
+
+.skillsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+
+.skillItem {
+  background: white;
+  padding: 24px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.801);
+  text-align: center;
+  font-weight: 600;
+  font-size: 18px;
+  color: #333;
+}
+
+.aboutCard {
+  background: rgb(209, 199, 199);
+  padding: 24px 16px;
+  border-radius: 16px;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.12);
+}
+
+.aboutText {
+  font-size: 18px;
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  padding: 0 30px;
+}
+
+.aboutBtn {
+  display: inline-block;
+  width: 100%;
+  padding: 14px;
+  background: #111;
+  color: white;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  text-align: center;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+}
+
+.abtContainer {
+  text-align: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+
+}
+
+.abtCard {
+  background: white;
+  padding: 24px 16px;
+  border-radius: 16px;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.12);
+  margin: 0 .5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: .6rem;
+}
+
+.abtTitle {
+  font-size: 32px;
+  margin-bottom: 14px;
+  font-weight: 800;
+  color: #1a1a1a;
+}
+
+.abtSectionTitle {
+  font-size: 22px;
+  margin-bottom: 18px;
+  font-weight: 700;
+  color: #222;
+}
+
+.abtText {
+  font-size: 17px;
+  line-height: 1.6;
+  color: #444;
+  font-weight: 500;
+}
+
+.name {
+  font-weight: bold;
+}
+
+.experienceList {
+  list-style-type: none;
+  padding: 0;
+  margin: 20px 0px;
+}
+
+.experienceText {
+  margin-top: 16px;
+}
+
+.ctaCard {
+  background: #111;
+  color: white;
+  padding: 28px 16px;
+  border-radius: 18px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.836);
+}
+
+.ctaTitle {
+  font-size: 24px;
+  margin-bottom: 12px;
+  font-weight: 800;
+}
+
+.ctaText {
+  font-size: 18px;
+  padding: 20px 5px;
+  margin-bottom: 20px;
+  line-height: 1.6;
+  color: #ddd;
+}
+
+.ctaBtn {
+  display: inline-block;
+  width: 70%;
+  padding: 14px;
+  background: white;
+  color: #111;
+  font-size: 16px;
+  border-radius: 10px;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 6px 20px rgba(255,255,255,0.2);
+}
+
+@media (min-width: 520px) {
+  .skillsGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 768px) {
+  .heroCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .subtitle, .aboutText {
+    font-size: 24px;
+  }
+
+  .abtText {
+    font-size: 18px;
+  }
+  
+  .buttons {
+    width: 280px;
+    flex-direction: row;
+  }
+
+  .skillsGrid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .aboutCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .aboutBtn {
+    max-width: 70%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .skillsGrid{
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }

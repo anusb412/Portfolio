@@ -3,9 +3,12 @@ export default function Projects() {
     <section style={styles.container}>
       <h1>Projects</h1>
       <ul style={{ ...styles.list, listStyleType: "none", padding: 0, margin: 0 }}>
-        <li>⚡ Fast React Portfolio</li>
-        <li>🎮 React Native Zelda RPG</li>
-        <li>🧠 AI-Powered Chat Tool</li>
+        <li>
+          ⚡ React Login Auth (Frontend & Backend)
+          <a href="https://github.com/anusb412/Auth">Check Me Out!</a>
+          </li>
+        <li>🎮 ECommerce Shop </li>
+        <li>🧠 Kneaders CopyCat</li>
       </ul>
     </section>
   );
