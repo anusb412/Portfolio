@@ -1,47 +1,75 @@
-export default function Home() {
-  return (
-    <section className="container">
+import { Link } from "react-router-dom";
 
-      {/* HERO */}
-      <div className="heroCard">
-        <h1 className="title">Hello, I'm Anthony 👋</h1>
-        <p className="subtitle">
+export default function Home() {
+  const skills = [
+    "React",
+    "JavaScript",
+    "HTML/CSS",
+    "Node.js",
+    "UI/UX",
+    "APIs",
+    "Responsive Design",
+  ];
+
+  return (
+    <main className="mainContainer">
+      {/* HERO SECTION */}
+      <section className="homeCard heroCard">
+        <h1 className="heroTitle">Hello, I'm Anthony 👋</h1>
+
+        <p className="heroSubtitle">
           I’m a modern frontend developer creating clean, responsive,
           and professional React applications.
         </p>
 
-        <div className="buttons">
-          <a href="/projects" className="primaryBtn">View Projects</a>
-          <a href="/contact" className="secondaryBtn">Contact</a>
-        </div>
-      </div>
+        <div className="buttonGroup">
+          <Link to="/projects" className="primaryBtn">
+            View Projects
+          </Link>
 
-      {/* SKILLS */}
-      <div className="skillsCard">
-        <h2 className="sectionTitle">Skills</h2>
-
-        <div className='skillsGrid'>
-          {["React", "JavaScript", "HTML/CSS", "Node.js", "UI/UX", "APIs", "Responsive Design"]
-            .map((skill) => (
-              <div key={skill} className="skillItem">{skill}</div>
-            ))
-          }
+          <Link to="/contact" className="secondaryBtn">
+            Contact
+          </Link>
         </div>
-      </div>
+      </section>
+
+      {/* SKILLS SECTION */}
+      <section className="homeCard">
+        <h2
+          className="heroTitle"
+          style={{ fontSize: "28px", marginBottom: "24px" }}
+        >
+          Skills
+        </h2>
+
+        <div className="skillsGrid">
+          {skills.map((skill) => (
+            <div key={skill} className="skillPill">
+              {skill}
+            </div>
+          ))}
+        </div>
+      </section>
 
       {/* ABOUT PREVIEW */}
-      <div className="aboutCard">
-        <h2 className="sectionTitle">About Me</h2>
-        <p className="aboutText">
+      <section className="homeCard">
+        <h2
+          className="heroTitle"
+          style={{ fontSize: "28px", marginBottom: "24px" }}
+        >
+          About Me
+        </h2>
+
+        <p className="aboutPreview">
           I specialize in building beautiful, functional web apps with a focus
-          on clean UI, accessibility, and high performance. I love turning ideas
-          into polished digital experiences that users enjoy.
+          on clean UI, accessibility, and performance. I enjoy turning ideas
+          into polished digital experiences that feel effortless to use.
         </p>
 
-        <a href="/about" className="aboutBtn">Learn More →</a>
-      </div>
-
-    </section>
+        <Link to="/about" className="aboutBtn">
+          Learn More →
+        </Link>
+      </section>
+    </main>
   );
 }
-

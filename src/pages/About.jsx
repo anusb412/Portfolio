@@ -2,45 +2,41 @@ export default function About() {
   return (
     <section className="abtContainer">
 
-      {/* INTRO CARD */}
-      <div className="abtCard">
+      {/* INTRO */}
+      <div className="abtCard abtIntro">
         <h1 className="abtTitle">About Me</h1>
-        <p className="abtText">
-          Hi! I'm <span className='name' >Anthony Nusbaum</span>, a passionate developer who loves building 
-          beautiful, high-performing apps using modern web technologies. I focus on creating 
-          clean UI, smooth interactions, and user-first experiences that feel great to use.
+        <p className="abtText lead">
+          Hi! I'm <span className="name">Anthony Nusbaum</span>, a passionate
+          developer who loves building beautiful, high-performing apps using
+          modern web technologies.
         </p>
 
         <p className="abtText">
-          I started coding <strong>2 Years Ago</strong>. Since then, I've 
-          been dedicated to constantly improving, learning new tools, and pushing myself to 
-          build better and smarter applications.
+          I focus on creating clean UI, smooth interactions, and user-first
+          experiences that feel great to use. I started coding
+          <strong> 2 years ago</strong> and have been relentlessly improving ever since.
         </p>
       </div>
 
-      {/* EXPERIENCE CARD */}
+      {/* EXPERIENCE */}
       <div className="abtCard">
         <h2 className="abtSectionTitle">My Experience</h2>
-        <p className="abtText">
-          Over the years, I've worked on a variety of projects — from small personal tools 
-          to fully featured applications. My experience includes:
-        </p>
 
         <ul className="experienceList">
-          <li>⭐ Building dynamic React applications with clean UI</li>
-          <li>⭐ Creating responsive layouts for all screen sizes</li>
-          <li>⭐ Working with APIs, authentication, and modern data flows</li>
-          <li>⭐ Designing user-friendly interfaces with accessibility in mind</li>
-          <li>⭐ Developing full-stack apps with Node.js and backend tools</li>
+          <li>⚡ Dynamic React applications with clean UI</li>
+          <li>📱 Fully responsive layouts for all screen sizes</li>
+          <li>🔐 APIs, authentication, and modern data flows</li>
+          <li>🎨 UI/UX design with accessibility in mind</li>
+          <li>🛠 Full-stack apps using Node.js & backend tools</li>
         </ul>
 
-        <p className='experienceText' >
-          I'm currently focusing on <strong>Kneaders Clone Website</strong>, and looking to 
-          expand into <strong>VR Game Development</strong>.
+        <p className="abtText subtle">
+          Currently working on the <strong>Kneaders Clone Website</strong> and
+          expanding into <strong>VR Game Development</strong>.
         </p>
       </div>
 
-      {/* SKILLS CARD */}
+      {/* SKILLS */}
       <div className="abtCard">
         <h2 className="abtSectionTitle">Technical Skills</h2>
 
@@ -48,44 +44,42 @@ export default function About() {
           {[
             "React",
             "JavaScript",
-            "HTML & Modern CSS",
+            "HTML & CSS",
             "Node.js",
-            "UI/UX",
+            "UI / UX",
             "APIs",
             "Responsive Design",
             "Git & GitHub",
             "Firebase",
-            "MongoDB"
-
-          ].map((skill) => (
-            <div key={skill} className="skillItem">{skill}</div>
+            "MongoDB",
+          ].map(skill => (
+            <div key={skill} className="skillItem skillPill">
+              {skill}
+            </div>
           ))}
         </div>
       </div>
 
-      {/* PERSONAL CARD */}
+      {/* PERSONAL */}
       <div className="abtCard">
-        <h2 className="abtSectionTitle">A Bit More Personal</h2>
+        <h2 className="abtSectionTitle">Beyond the Code</h2>
         <p className="abtText">
-          Outside of development, I enjoy <strong>PaddelBoarding, Fishing, Video Gaming, Hiking</strong>. I love finding 
-          inspiration from design, gaming, music, and whatever sparks creativity. 
+          Outside of development, I enjoy <strong>paddleboarding, fishing,
+          gaming, and hiking</strong>. Creativity for me comes from many places — design, games, music, and curiosity.
         </p>
 
         <p className="abtText">
-          I'm always learning, improving, and trying to make something better than before. 
-          Whether it's refining a UI, optimizing performance, or experimenting with new tools — 
-          I enjoy the process of creating something meaningful.
+          I enjoy refining details, improving performance, and experimenting
+          with new ideas. Progress is the fun part.
         </p>
       </div>
 
-      {/* CTA CARD */}
+      {/* CTA */}
       <div className="ctaCard">
-        <h2 className="ctaTitle">Want to Work Together?</h2>
+        <h2 className="ctaTitle">Let’s Build Something Great</h2>
         <p className="ctaText">
-          I'm currently open to opportunities, collaborations, or project requests.  
-          If you'd like to reach out, feel free to contact me anytime.
+          I’m open to opportunities, collaborations, and freelance projects.
         </p>
-
         <a href="/contact" className="ctaBtn">Contact Me →</a>
       </div>
 
